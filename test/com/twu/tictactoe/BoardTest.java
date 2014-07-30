@@ -1,27 +1,15 @@
 package com.twu.tictactoe;
 
-import org.junit.Before;
 import org.junit.Test;
 
-import java.io.PrintStream;
-
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.junit.Assert.*;
 
 public class BoardTest {
 
-    private PrintStream fakePrintStream;
-
-    @Before
-    public void setUp() {
-        fakePrintStream = mock(PrintStream.class);
-    }
-
     @Test
-    public void shouldPrintBoard() {
-        Board b = new Board(fakePrintStream);
-        b.showBoard();
-        verify(fakePrintStream).print(
+    public void shouldPrintInitialBoard() {
+        Board b = new Board();
+        assertEquals(b.getBoardString(),
                 "   |   |   \n" +
                 "-----------\n" +
                 "   |   |   \n" +
@@ -32,9 +20,8 @@ public class BoardTest {
 
     @Test
     public void shouldMarkSquareWithX() {
-        Board b = new Board(fakePrintStream);
-        b.showBoard();
-        verify(fakePrintStream).print(
+        Board b = new Board();
+        assertEquals(b.getBoardString(),
                 "   |   |   \n" +
                 "-----------\n" +
                 "   |   |   \n" +
@@ -42,8 +29,7 @@ public class BoardTest {
                 "   |   |   \n"
         );
         b.mark(2, "X");
-        b.showBoard();
-        verify(fakePrintStream).print(
+        assertEquals(b.getBoardString(),
                 "   | X |   \n" +
                 "-----------\n" +
                 "   |   |   \n" +
@@ -51,4 +37,19 @@ public class BoardTest {
                 "   |   |   \n"
         );
     }
+
+    @Test
+    public void shouldReturnTrueIfCellIsEmpty() {
+        Board b = new Board();
+        assertTrue(b.cellIsEmpty(1));
+    }
+
+    @Test
+    public void shouldReturnFallIfCellIsOccupied() {
+        Board b = new Board();
+        b.mark(2, "X");
+        assertFalse(b.cellIsEmpty(2));
+    }
+
+
 }

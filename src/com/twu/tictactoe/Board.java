@@ -1,13 +1,9 @@
 package com.twu.tictactoe;
 
-import java.io.PrintStream;
-
 public class Board {
-    private PrintStream out;
     private String[] state = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
 
-    public Board(PrintStream out) {
-        this.out = out;
+    public Board() {
     }
 
     private String getRowString(int row) {
@@ -17,18 +13,15 @@ public class Board {
                 this.state[startCell + 2] + " \n";
     }
 
-    public void showBoard() {
-        out.print(
-                getRowString(0) +
-                        "-----------\n" +
-                        getRowString(1) +
-                        "-----------\n" +
-                        getRowString(2)
-        );
+    public String getBoardString() {
+        return  getRowString(0) + "-----------\n" + getRowString(1) + "-----------\n" + getRowString(2);
     }
 
     public void mark(int i, String x) {
-        state[i-1] = x;
+        state[i - 1] = x;
     }
 
+    public boolean cellIsEmpty(int i) {
+        return state[i - 1].equals(" ");
+    }
 }
