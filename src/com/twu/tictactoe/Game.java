@@ -1,45 +1,35 @@
 package com.twu.tictactoe;
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.PrintStream;
 
 public class Game {
+    private Player player1;
+    private Player player2;
     private Board board;
-    private BufferedReader in;
     private PrintStream out;
 
-    public Game(Board board, BufferedReader in, PrintStream out) {
+
+    public Game(Board board, Player player1, Player player2, PrintStream out) {
         this.board = board;
-        this.in = in;
+        this.player1 = player1;
+        this.player2 = player2;
         this.out = out;
     }
 
     public void start() {
         out.print(board.getBoardString());
-        takeTurn(1);
+        takeTurn(player1);
         out.print(board.getBoardString());
-        takeTurn(2);
+        takeTurn(player2);
         out.print(board.getBoardString());
     }
 
-    public int getInput() {
-        try {
-            String choice = in.readLine();
-            return Integer.parseInt(choice);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return 0;
-    }
-
-    public void takeTurn(int player) {
-        int cell = getInput();
+    public void takeTurn(Player player) {
+        int cell = player.getChoice();
         while (!board.cellIsEmpty(cell)){
             out.println("Location not available");
-            cell = getInput();
+            cell = player.getChoice();
         }
-        board.mark(cell, player == 1 ? "X" : "O");
+        board.mark(cell, player.getSymbol());
     }
 }
