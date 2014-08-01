@@ -18,18 +18,9 @@ public class Game {
 
     public void start() {
         out.print(board.getBoardString());
-        takeTurn(player1);
+        player1.takeTurn(board);
         out.print(board.getBoardString());
-        takeTurn(player2);
+        player2.takeTurn(board);
         out.print(board.getBoardString());
-    }
-
-    public void takeTurn(Player player) {
-        int cell = player.getChoice();
-        while (!board.cellIsEmpty(cell)){
-            out.println("Location not available");
-            cell = player.getChoice();
-        }
-        board.mark(cell, player.getSymbol());
     }
 }

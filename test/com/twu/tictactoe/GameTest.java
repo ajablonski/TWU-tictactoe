@@ -3,7 +3,6 @@ package com.twu.tictactoe;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.io.PrintStream;
 
 import static org.mockito.Mockito.*;
@@ -38,28 +37,9 @@ public class GameTest {
     }
 
     @Test
-    public void shouldMarkSpaceWhenPlayerTakesTurn() {
-        when(player1.getChoice()).thenReturn(3);
-        testGame.takeTurn(player1);
-        verify(fakeBoard).mark(3, "X");
-    }
-
-    @Test
     public void shouldAlternatePlayerTurnsOnStart() {
         testGame.start();
-        verify(player1).getChoice();
-        verify(player2).getChoice();
-    }
-
-    @Test
-    public void shouldPromptAgainWhenInvalidLocationSelected() throws IOException {
-        when(fakeBoard.cellIsEmpty(1)).thenReturn(true, false);
-        when(player1.getChoice()).thenReturn(1);
-        when(player2.getChoice()).thenReturn(1, 7);
-        testGame.takeTurn(player1);
-        verify(fakeBoard).mark(1, "X");
-        testGame.takeTurn(player2);
-        verify(fakePrintStream).println("Location not available");
-        verify(fakeBoard).mark(7, "O");
+        verify(player1).takeTurn(fakeBoard);
+        verify(player2).takeTurn(fakeBoard);
     }
 }

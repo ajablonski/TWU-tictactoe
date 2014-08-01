@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         Board b = new Board();
-        Player player1 = new Player(new BufferedReader(new InputStreamReader(System.in)), "X");
-        Player player2 = new Player(new BufferedReader(new InputStreamReader(System.in)), "O");
+        Player player1 = new Player(new BufferedReader(new InputStreamReader(System.in)), System.out, "X");
+        Player player2 = new Player(new BufferedReader(new InputStreamReader(System.in)), System.out, "O");
 
         Game g = new Game(b, player1, player2, System.out);
         g.start();
