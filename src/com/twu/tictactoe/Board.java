@@ -14,15 +14,19 @@ public class Board {
     }
 
     public String getBoardString() {
-        return  getRowString(0) + "-----------\n" + getRowString(1) + "-----------\n" + getRowString(2);
+        return getRowString(0) + "-----------\n" + getRowString(1) + "-----------\n" + getRowString(2);
     }
 
-    public void mark(int i, String x) {
-        state[i - 1] = x;
+    public void mark(int cellNumber, String symbol) {
+        state[stateIndex(cellNumber)] = symbol;
     }
 
-    public boolean cellIsEmpty(int i) {
-        return state[i - 1].equals(" ");
+    public String getCell(int cellNumber) {
+        return state[stateIndex(cellNumber)];
+    }
+
+    public boolean cellIsEmpty(int cellNumber) {
+        return state[stateIndex(cellNumber)].equals(" ");
     }
 
     public boolean isFull() {
@@ -34,5 +38,9 @@ public class Board {
             }
         }
         return isFull;
+    }
+
+    private int stateIndex(int cellNumber) {
+        return cellNumber - 1;
     }
 }

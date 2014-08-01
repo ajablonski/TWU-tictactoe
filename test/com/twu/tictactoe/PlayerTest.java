@@ -42,5 +42,4 @@ public class PlayerTest {
         verify(board).mark(1, "X");
         verify(fakePrintStream).println("Location not available");
     }
-
 }

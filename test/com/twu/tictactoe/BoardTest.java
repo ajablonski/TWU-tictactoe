@@ -1,15 +1,22 @@
 package com.twu.tictactoe;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class BoardTest {
 
+    private Board board;
+
+    @Before
+    public void setUp() throws Exception {
+        board = new Board();
+    }
+
     @Test
     public void shouldPrintInitialBoard() {
-        Board b = new Board();
-        assertEquals(b.getBoardString(),
+        assertEquals(board.getBoardString(),
                 "   |   |   \n" +
                 "-----------\n" +
                 "   |   |   \n" +
@@ -20,16 +27,15 @@ public class BoardTest {
 
     @Test
     public void shouldMarkSquareWithX() {
-        Board b = new Board();
-        assertEquals(b.getBoardString(),
+        assertEquals(board.getBoardString(),
                 "   |   |   \n" +
                 "-----------\n" +
                 "   |   |   \n" +
                 "-----------\n" +
                 "   |   |   \n"
         );
-        b.mark(2, "X");
-        assertEquals(b.getBoardString(),
+        board.mark(2, "X");
+        assertEquals(board.getBoardString(),
                 "   | X |   \n" +
                 "-----------\n" +
                 "   |   |   \n" +
@@ -40,30 +46,33 @@ public class BoardTest {
 
     @Test
     public void shouldReturnTrueIfCellIsEmpty() {
-        Board b = new Board();
-        assertTrue(b.cellIsEmpty(1));
+        assertTrue(board.cellIsEmpty(1));
     }
 
     @Test
     public void shouldReturnFalseIfCellIsOccupied() {
-        Board b = new Board();
-        b.mark(2, "X");
-        assertFalse(b.cellIsEmpty(2));
+        board.mark(2, "X");
+        assertFalse(board.cellIsEmpty(2));
     }
 
     @Test
     public void shouldReturnTrueIfIsFull() {
-        Board b = new Board();
         for (int i = 0; i < 9; i++) {
-            b.mark(i + 1, "X");
+            board.mark(i + 1, "X");
         }
-        assertTrue(b.isFull());
+        assertTrue(board.isFull());
     }
 
     @Test
     public void shouldReturnFalseIfIsNotFull() {
-        Board b = new Board();
-        assertFalse(b.isFull());
+        assertFalse(board.isFull());
+    }
+
+    @Test
+    public void shouldGetCellSymbol() {
+        board.mark(1, "X");
+        assertEquals("X", board.getCell(1));
+        assertEquals(" ", board.getCell(2));
     }
 
 
