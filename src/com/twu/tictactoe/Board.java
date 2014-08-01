@@ -3,16 +3,6 @@ package com.twu.tictactoe;
 public class Board {
     private String[] state = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
 
-    public Board() {
-    }
-
-    private String getRowString(int row) {
-        int startCell = row * 3;
-        return " " + this.state[startCell] + " | " +
-                this.state[startCell + 1] + " | " +
-                this.state[startCell + 2] + " \n";
-    }
-
     public String getBoardString() {
         return getRowString(0) + "-----------\n" + getRowString(1) + "-----------\n" + getRowString(2);
     }
@@ -38,6 +28,13 @@ public class Board {
             }
         }
         return isFull;
+    }
+
+    private String getRowString(int row) {
+        int startCell = row * 3;
+        return " " + this.state[startCell] + " | " +
+                this.state[startCell + 1] + " | " +
+                this.state[startCell + 2] + " \n";
     }
 
     private int stateIndex(int cellNumber) {
