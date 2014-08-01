@@ -45,10 +45,25 @@ public class BoardTest {
     }
 
     @Test
-    public void shouldReturnFallIfCellIsOccupied() {
+    public void shouldReturnFalseIfCellIsOccupied() {
         Board b = new Board();
         b.mark(2, "X");
         assertFalse(b.cellIsEmpty(2));
+    }
+
+    @Test
+    public void shouldReturnTrueIfIsFull() {
+        Board b = new Board();
+        for (int i = 0; i < 9; i++) {
+            b.mark(i + 1, "X");
+        }
+        assertTrue(b.isFull());
+    }
+
+    @Test
+    public void shouldReturnFalseIfIsNotFull() {
+        Board b = new Board();
+        assertFalse(b.isFull());
     }
 
 

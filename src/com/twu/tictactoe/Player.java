@@ -16,7 +16,7 @@ public class Player {
         this.out = out;
     }
 
-    public int getChoice() {
+    private int getChoice() {
         int choice = 0;
         try {
             choice = Integer.parseInt(in.readLine());
@@ -24,10 +24,6 @@ public class Player {
             e.printStackTrace();
         }
         return choice;
-    }
-
-    public String getSymbol() {
-        return this.symbol;
     }
 
     public void takeTurn(Board board) {
@@ -38,6 +34,6 @@ public class Player {
             choice = getChoice();
         }
 
-        board.mark(choice, getSymbol());
+        board.mark(choice, this.symbol);
     }
 }

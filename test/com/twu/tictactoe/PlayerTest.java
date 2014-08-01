@@ -7,8 +7,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintStream;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 public class PlayerTest {
@@ -22,18 +20,6 @@ public class PlayerTest {
         fakeBufferedReader = mock(BufferedReader.class);
         fakePrintStream = mock(PrintStream.class);
         player = new Player(fakeBufferedReader, fakePrintStream, "X");
-    }
-
-    @Test
-    public void shouldGetChoice() throws IOException {
-        when(fakeBufferedReader.readLine()).thenReturn("2");
-
-        assertThat(player.getChoice(), is(2));
-    }
-
-    @Test
-    public void shouldGetSymbol() {
-        assertThat(player.getSymbol(), is("X"));
     }
 
     @Test

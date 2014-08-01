@@ -24,4 +24,15 @@ public class Board {
     public boolean cellIsEmpty(int i) {
         return state[i - 1].equals(" ");
     }
+
+    public boolean isFull() {
+        boolean isFull = true;
+        for (String cell : state) {
+            if (cell.equals(" ")) {
+                isFull = false;
+                break;
+            }
+        }
+        return isFull;
+    }
 }
