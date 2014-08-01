@@ -25,5 +25,6 @@ public class Game {
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
             out.print(board.getBoardString());
         }
+        out.println("Game is a draw");
     }
 }

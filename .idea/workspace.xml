@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f34e1d2-6b62-4ff5-95bc-fab84b5bd26f" name="Default" comment="Game loops until board is full">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/Board.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java" afterPath="$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java" />
+    <list default="true" id="5f34e1d2-6b62-4ff5-95bc-fab84b5bd26f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/Game.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java" afterPath="$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/Player.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/tictactoe/PlayerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/tictactoe/PlayerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TWU-TicTacToe.iws" />
@@ -65,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0526316" vertical-offset="0" max-vertical-offset="630">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="630">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#580#581#0" expanded="true" />
                 <element signature="e#612#613#0" expanded="true" />
@@ -88,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Game.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="525">
-              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.8881579" vertical-offset="0" max-vertical-offset="540">
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,8 +99,8 @@
       <file leaf-file-name="GameTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="720">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="735">
+              <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,9 +125,9 @@
         <option value="$PROJECT_DIR$/src/com/twu/tictactoe/Player.java" />
         <option value="$PROJECT_DIR$/test/com/twu/tictactoe/PlayerTest.java" />
         <option value="$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/tictactoe/Game.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/tictactoe/Board.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/tictactoe/Game.java" />
       </list>
     </option>
   </component>
@@ -691,7 +687,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="22" width="1400" height="790" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -707,8 +703,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32871014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32871014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -716,6 +712,30 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32871014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -849,31 +869,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="525">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="630">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="720">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="735">
+          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,13 +908,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0526316" vertical-offset="0" max-vertical-offset="630">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.8881579" vertical-offset="0" max-vertical-offset="540">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

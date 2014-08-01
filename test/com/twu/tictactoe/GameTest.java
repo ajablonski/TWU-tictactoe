@@ -39,5 +39,6 @@ public class GameTest {
         testGame.start();
         verify(player1, times(2)).takeTurn(fakeBoard);
         verify(player2, times(1)).takeTurn(fakeBoard);
+        verify(fakePrintStream).println("Game is a draw");
     }
 }
