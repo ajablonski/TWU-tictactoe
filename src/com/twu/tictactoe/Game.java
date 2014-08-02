@@ -19,12 +19,22 @@ public class Game {
 
     public void start() {
         int currentPlayerIndex = 0;
-        out.print(board.getBoardString());
-        while (!board.isFull()) {
-            players.get(currentPlayerIndex).takeTurn(board);
-            currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+        Player currentPlayer;
+        String message = "Game is a draw";
+        boolean keepGoing = true;
+        while (keepGoing) {
+            keepGoing = !board.isFull();
+
+            currentPlayer = players.get(currentPlayerIndex);
+            currentPlayer.takeTurn(board);
             out.print(board.getBoardString());
+            if (board.hasBeenWonBy(currentPlayer)) {
+                message = "Player " + currentPlayer.getNumber() + " Wins!";
+                keepGoing = false;
+            }
+
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
         }
-        out.println("Game is a draw");
+        out.println(message);
     }
 }

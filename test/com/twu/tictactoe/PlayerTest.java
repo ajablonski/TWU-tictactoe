@@ -52,4 +52,9 @@ public class PlayerTest {
     public void shouldGetPlayerSymbol() {
         assertThat(player.getSymbol(), is("X"));
     }
+
+    @Test
+    public void shouldGetPlayerNumber() {
+        assertThat(player.getNumber(), is(1));
+    }
 }

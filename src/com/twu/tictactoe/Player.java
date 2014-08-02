@@ -44,4 +44,8 @@ public class Player {
     public String getSymbol() {
         return this.symbol;
     }
+
+    public int getNumber() {
+        return this.playerNumber;
+    }
 }

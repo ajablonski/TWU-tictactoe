@@ -35,10 +35,23 @@ public class GameTest {
 
     @Test
     public void shouldPlayUntilBoardIsFull() {
-        when(fakeBoard.isFull()).thenReturn(false, false, false, true);
+        when(fakeBoard.isFull()).thenReturn(false, false, true);
+        when(fakeBoard.hasBeenWonBy(any(Player.class))).thenReturn(false);
         testGame.start();
         verify(player1, times(2)).takeTurn(fakeBoard);
         verify(player2, times(1)).takeTurn(fakeBoard);
         verify(fakePrintStream).println("Game is a draw");
+    }
+
+    @Test
+    public void shouldStopWhenPlayerHasWon() {
+        when(fakeBoard.hasBeenWonBy(player1)).thenReturn(true);
+        when(player1.getNumber()).thenReturn(1);
+        testGame.start();
+        verify(player1, times(1)).takeTurn(fakeBoard);
+        verify(player2, never()).takeTurn(fakeBoard);
+
+        verify(fakePrintStream).println("Player 1 Wins!");
+        verify(fakePrintStream, never()).println("Game is a draw");
     }
 }
