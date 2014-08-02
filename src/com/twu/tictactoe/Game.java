@@ -21,20 +21,25 @@ public class Game {
         int currentPlayerIndex = 0;
         Player currentPlayer;
         String message = "Game is a draw";
-        boolean keepGoing = true;
-        while (keepGoing) {
-            keepGoing = !board.isFull();
+
+        out.print(board.getBoardString());
+        while (!gameEnded()) {
 
             currentPlayer = players.get(currentPlayerIndex);
             currentPlayer.takeTurn(board);
-            out.print(board.getBoardString());
             if (board.hasBeenWonBy(currentPlayer)) {
                 message = "Player " + currentPlayer.getNumber() + " Wins!";
-                keepGoing = false;
             }
 
+            out.print(board.getBoardString());
             currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
         }
         out.println(message);
+    }
+
+    private boolean gameEnded() {
+        return board.isFull()
+                || board.hasBeenWonBy(players.get(0))
+                || board.hasBeenWonBy(players.get(1));
     }
 }
