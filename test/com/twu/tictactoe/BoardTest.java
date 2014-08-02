@@ -3,6 +3,7 @@ package com.twu.tictactoe;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class BoardTest {
@@ -18,30 +19,32 @@ public class BoardTest {
     public void shouldPrintInitialBoard() {
         assertEquals(board.getBoardString(),
                 "   |   |   \n" +
-                "-----------\n" +
-                "   |   |   \n" +
-                "-----------\n" +
-                "   |   |   \n"
+                        "-----------\n" +
+                        "   |   |   \n" +
+                        "-----------\n" +
+                        "   |   |   \n"
+        );
+    }
+
+    @Test
+    public void shouldPrintMarkedBoard() {
+        Board board = new Board(new String[]
+                {" ", "X", " ",
+                        " ", " ", " ",
+                        " ", " ", " "});
+        assertEquals(board.getBoardString(),
+                "   | X |   \n" +
+                        "-----------\n" +
+                        "   |   |   \n" +
+                        "-----------\n" +
+                        "   |   |   \n"
         );
     }
 
     @Test
     public void shouldMarkSquareWithX() {
-        assertEquals(board.getBoardString(),
-                "   |   |   \n" +
-                "-----------\n" +
-                "   |   |   \n" +
-                "-----------\n" +
-                "   |   |   \n"
-        );
         board.mark(2, "X");
-        assertEquals(board.getBoardString(),
-                "   | X |   \n" +
-                "-----------\n" +
-                "   |   |   \n" +
-                "-----------\n" +
-                "   |   |   \n"
-        );
+        assertThat(board.getBoardState(), is(new String[]{" ", "X", " ", " ", " ", " ", " ", " ", " "}));
     }
 
     @Test
@@ -57,9 +60,11 @@ public class BoardTest {
 
     @Test
     public void shouldReturnTrueIfIsFull() {
-        for (int i = 0; i < 9; i++) {
-            board.mark(i + 1, "X");
-        }
+        Board board = new Board(new String[]{
+                "X", "X", "O",
+                "O", "O", "X",
+                "X", "O", "X"
+        });
         assertTrue(board.isFull());
     }
 
@@ -69,10 +74,14 @@ public class BoardTest {
     }
 
     @Test
-    public void shouldGetCellSymbol() {
+    public void shouldGetEmptyCellGivenEmptyBoard() {
+        assertThat(board.getCell(1), is(" "));
+    }
+
+    @Test
+    public void shouldGetCellSymbolWhenMarked() {
         board.mark(1, "X");
         assertEquals("X", board.getCell(1));
-        assertEquals(" ", board.getCell(2));
     }
 
 

@@ -1,7 +1,15 @@
 package com.twu.tictactoe;
 
 public class Board {
-    private String[] state = {" ", " ", " ", " ", " ", " ", " ", " ", " "};
+    private String[] state;
+
+    public Board(String[] state) {
+        this.state = state.clone();
+    }
+
+    public Board() {
+        this.state = new String[] {" ", " ", " ", " ", " ", " ", " ", " ", " "};
+    }
 
     public String getBoardString() {
         return getRowString(0) + "-----------\n" + getRowString(1) + "-----------\n" + getRowString(2);
@@ -39,5 +47,9 @@ public class Board {
 
     private int stateIndex(int cellNumber) {
         return cellNumber - 1;
+    }
+
+    public String[] getBoardState() {
+        return state.clone();
     }
 }
