@@ -5,8 +5,6 @@ import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 public class BoardTest {
 
@@ -93,8 +91,6 @@ public class BoardTest {
                 "X", "X", "X",
                 "O", "O", " ",
         });
-        Player player = mock(Player.class);
-        when(player.getSymbol()).thenReturn("X");
         assertThat(board.hasBeenWonBy("X"), is(true));
 
     }
@@ -106,8 +102,6 @@ public class BoardTest {
                 "O", "X", " ",
                 "O", "X", " ",
         });
-        Player player = mock(Player.class);
-        when(player.getSymbol()).thenReturn("X");
         assertThat(board.hasBeenWonBy("X"), is(true));
     }
 
@@ -118,8 +112,6 @@ public class BoardTest {
                 "O", "X", " ",
                 "X", " ", " ",
         });
-        Player player = mock(Player.class);
-        when(player.getSymbol()).thenReturn("X");
         assertThat(board.hasBeenWonBy("X"), is(true));
     }
 
@@ -130,8 +122,6 @@ public class BoardTest {
                 "X", "O", "X",
                 "O", "X", " ",
         });
-        Player player = mock(Player.class);
-        when(player.getSymbol()).thenReturn("X");
         assertThat(board.hasBeenWonBy("X"), is(false));
     }
 

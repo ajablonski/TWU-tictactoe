@@ -24,7 +24,6 @@ public class WinIfPossibleStrategy implements Strategy {
                 Board testBoard = new Board(board.getBoardState());
                 testBoard.mark(i, playerSymbol);
                 if (testBoard.hasBeenWonBy(playerSymbol)) {
-                    board.mark(i, playerSymbol);
                     nextSquare = i;
                 }
             }

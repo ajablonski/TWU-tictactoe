@@ -28,29 +28,16 @@ public class ComputerPlayerTest {
         board = mock(Board.class);
     }
 
-
-
     @Test
     public void shouldTakeEmptySquareIfCanWin() {
-//        Board board = new Board(new String[]{
-//                " ", " ", " ",
-//                "X", " ", "X",
-//                " ", " ", " "
-//        });
         when(winIfPossibleStrategy.canBeUsed()).thenReturn(true);
         player.takeTurn(board);
         verify(winIfPossibleStrategy).getNextSquare();
-        verify(strategies.get(0)).getNextSquare();
-        verify(strategies.get(1), never()).getNextSquare();
+        verify(nextAvailableSquareStrategy, never()).getNextSquare();
     }
 
     @Test
     public void shouldTakeTurnBySelectingFirstAvailableCell() {
-//        Board board = new Board(new String[]{
-//                " ", " ", " ",
-//                "X", " ", " ",
-//                " ", " ", " "
-//        });
         when(winIfPossibleStrategy.canBeUsed()).thenReturn(false);
         player.takeTurn(board);
         verify(winIfPossibleStrategy, never()).getNextSquare();

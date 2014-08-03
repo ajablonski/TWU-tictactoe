@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f34e1d2-6b62-4ff5-95bc-fab84b5bd26f" name="Default" comment="Player symbol passed for strategies and hasWon instead of player object">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/Board.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/Board.java" />
+    <list default="true" id="5f34e1d2-6b62-4ff5-95bc-fab84b5bd26f" name="Default" comment="WinIfPossibleStrategy no longer marks during execution">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java" afterPath="$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/ComputerPlayer.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/ComputerPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java" afterPath="$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/Game.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java" afterPath="$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/Main.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/twu/tictactoe/WinIfPossibleStrategy.java" afterPath="$PROJECT_DIR$/src/com/twu/tictactoe/WinIfPossibleStrategy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/twu/tictactoe/WinIfPossibleStrategyTest.java" afterPath="$PROJECT_DIR$/test/com/twu/tictactoe/WinIfPossibleStrategyTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -38,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#388#398#0" expanded="true" />
               </folding>
@@ -46,11 +41,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="765">
+              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="850">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="850">
+              <caret line="25" column="25" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -71,41 +76,34 @@
       <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1185">
-              <caret line="80" column="79" selection-start-line="80" selection-start-column="79" selection-end-line="80" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1215">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#111#112#0" expanded="true" />
                 <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BoardTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1070" max-vertical-offset="1935">
-              <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
-              <folding />
+            <state vertical-scroll-proportion="0.24418604" vertical-offset="0" max-vertical-offset="1875">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComputerPlayerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComputerPlayer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ComputerPlayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/ComputerPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8023256" vertical-offset="0" max-vertical-offset="435">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+              <caret line="17" column="49" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -114,8 +112,8 @@
       <file leaf-file-name="WinIfPossibleStrategy.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/WinIfPossibleStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+              <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
               <folding>
                 <element signature="e#348#349#0" expanded="true" />
                 <element signature="e#391#392#0" expanded="true" />
@@ -127,9 +125,21 @@
       <file leaf-file-name="WinIfPossibleStrategyTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/WinIfPossibleStrategyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-              <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="915">
+              <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComputerPlayerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="765">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,13 +166,13 @@
         <option value="$PROJECT_DIR$/test/com/twu/tictactoe/NextAvailableSquareStrategyTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/tictactoe/Board.java" />
         <option value="$PROJECT_DIR$/src/com/twu/tictactoe/Game.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/tictactoe/WinIfPossibleStrategy.java" />
         <option value="$PROJECT_DIR$/test/com/twu/tictactoe/GameTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/tictactoe/ComputerPlayer.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/tictactoe/Main.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/tictactoe/WinIfPossibleStrategy.java" />
         <option value="$PROJECT_DIR$/test/com/twu/tictactoe/WinIfPossibleStrategyTest.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java" />
       </list>
     </option>
   </component>
@@ -817,11 +827,20 @@
     <MESSAGE value="ComputerPlayer plays winning square if possible" />
     <MESSAGE value="Computer player logic moved into Strategy subclasses" />
     <MESSAGE value="Player symbol passed for strategies and hasWon instead of player object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player symbol passed for strategies and hasWon instead of player object" />
+    <MESSAGE value="WinIfPossibleStrategy no longer marks during execution" />
+    <option name="LAST_COMMIT_MESSAGE" value="WinIfPossibleStrategy no longer marks during execution" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/twu/tictactoe/Board.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -839,12 +858,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="675">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,6 +883,7 @@
           <folding>
             <element signature="e#111#112#0" expanded="true" />
             <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,7 +892,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1260">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -913,12 +930,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="675">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -943,6 +955,7 @@
           <folding>
             <element signature="e#111#112#0" expanded="true" />
             <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -951,7 +964,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1260">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -990,6 +1005,7 @@
           <folding>
             <element signature="e#111#112#0" expanded="true" />
             <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,7 +1014,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="900">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1055,19 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="825">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding>
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1207#1208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/PlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="975">
@@ -1113,25 +1118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1185">
-          <caret line="80" column="79" selection-start-line="80" selection-start-column="79" selection-end-line="80" selection-end-column="79" />
-          <folding>
-            <element signature="e#111#112#0" expanded="true" />
-            <element signature="e#153#154#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1310" max-vertical-offset="1935">
-          <caret line="121" column="46" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mockito/mockito-all/1.9.5/mockito-all-1.9.5.jar!/org/mockito/internal/creation/MethodInterceptorFilter.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.76" vertical-offset="66" max-vertical-offset="435">
@@ -1140,21 +1126,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/WinIfPossibleStrategy.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="850">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="765">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1169,10 +1144,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/ComputerPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="850">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1180,26 +1163,61 @@
     <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#388#398#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1215">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#111#112#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/ComputerPlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="335" max-vertical-offset="765">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/WinIfPossibleStrategyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="915">
+          <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/ComputerPlayer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/twu/tictactoe/WinIfPossibleStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8023256" vertical-offset="0" max-vertical-offset="435">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/tictactoe/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24418604" vertical-offset="0" max-vertical-offset="1875">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

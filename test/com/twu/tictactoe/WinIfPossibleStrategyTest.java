@@ -6,8 +6,8 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.anyInt;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Matchers.anyString;
+import static org.mockito.Mockito.*;
 
 public class WinIfPossibleStrategyTest {
     private Board fakeBoard;
@@ -48,5 +48,16 @@ public class WinIfPossibleStrategyTest {
         when(fakeBoard.getBoardState()).thenReturn(new String[] {" ", "X", " ", " ", "X", " ", " ", " ", " "});
 
         assertThat(winIfPossible.getNextSquare(), is(8));
+    }
+
+    @Test
+    public void shouldNotMarkBoard() {
+        when(fakeBoard.getCell(anyInt())).thenReturn(" ");
+        when(fakeBoard.getCell(2)).thenReturn("X");
+        when(fakeBoard.getCell(5)).thenReturn("X");
+        when(fakeBoard.getBoardState()).thenReturn(new String[] {" ", "X", " ", " ", "X", " ", " ", " ", " "});
+
+        winIfPossible.getNextSquare();
+        verify(fakeBoard, never()).mark(anyInt(), anyString());
     }
 }
