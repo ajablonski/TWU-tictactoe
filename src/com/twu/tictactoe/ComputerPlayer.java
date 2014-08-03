@@ -7,11 +7,10 @@ public class ComputerPlayer extends Player {
     private final List<Strategy> strategies;
 
     public ComputerPlayer(int playerNumber, String symbol, List<Strategy> strategies) {
-        super(null, null, playerNumber, symbol);
+        super(playerNumber, symbol);
         this.strategies = strategies;
     }
 
-    @Override
     public void takeTurn(Board board) {
         for (Strategy strategy : strategies) {
             if (strategy.canBeUsed()) {

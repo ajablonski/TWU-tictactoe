@@ -28,7 +28,7 @@ public class Game {
             currentPlayer = players.get(currentPlayerIndex);
             currentPlayer.takeTurn(board);
             if (board.hasBeenWonBy(currentPlayer.getSymbol())) {
-                message = "Player " + currentPlayer.getNumber() + " Wins!";
+                message = "HumanPlayer " + currentPlayer.getNumber() + " Wins!";
             }
 
             out.print(board.getBoardString());

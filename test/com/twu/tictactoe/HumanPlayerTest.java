@@ -11,9 +11,9 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.*;
 
-public class PlayerTest {
+public class HumanPlayerTest {
 
-    private Player player;
+    private HumanPlayer player;
     private BufferedReader fakeBufferedReader;
     private PrintStream fakePrintStream;
 
@@ -21,7 +21,7 @@ public class PlayerTest {
     public void setUp() {
         fakeBufferedReader = mock(BufferedReader.class);
         fakePrintStream = mock(PrintStream.class);
-        player = new Player(fakeBufferedReader, fakePrintStream, 1, "X");
+        player = new HumanPlayer(fakeBufferedReader, fakePrintStream, 1, "X");
     }
 
     @Test

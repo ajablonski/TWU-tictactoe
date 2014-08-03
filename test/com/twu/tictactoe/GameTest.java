@@ -12,13 +12,13 @@ public class GameTest {
 
     private PrintStream fakePrintStream;
     private Game testGame;
-    private Player player1;
-    private Player player2;
+    private HumanPlayer player1;
+    private HumanPlayer player2;
 
     @Before
     public void setUp() {
-        player1 = mock(Player.class);
-        player2 = mock(Player.class);
+        player1 = mock(HumanPlayer.class);
+        player2 = mock(HumanPlayer.class);
         fakePrintStream = mock(PrintStream.class);
         fakeBoard = mock(Board.class);
 
@@ -52,7 +52,7 @@ public class GameTest {
         verify(player1, times(1)).takeTurn(fakeBoard);
         verify(player2, never()).takeTurn(fakeBoard);
 
-        verify(fakePrintStream).println("Player 1 Wins!");
+        verify(fakePrintStream).println("HumanPlayer 1 Wins!");
         verify(fakePrintStream, never()).println("Game is a draw");
     }
 }
