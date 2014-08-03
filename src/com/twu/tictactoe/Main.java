@@ -11,6 +11,7 @@ public class Main {
         Player player1 = new Player(new BufferedReader(new InputStreamReader(System.in)), System.out, 1, "X");
         ArrayList<Strategy> strategies = new ArrayList<Strategy>();
         strategies.add(new WinIfPossibleStrategy(board, "O"));
+        strategies.add(new BlockIfPossibleStrategy(board, "X"));
         strategies.add(new NextAvailableSquareStrategy(board));
         Player player2 = new ComputerPlayer(2, "O", strategies);
 

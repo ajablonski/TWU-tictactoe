@@ -32,7 +32,6 @@ public class WinIfPossibleStrategyTest {
 
     @Test
     public void shouldReturnFalseIfNotUsable() {
-        when(fakeBoard.getCell(anyInt())).thenReturn(" ");
         when(fakeBoard.getCell(2)).thenReturn("X");
         when(fakeBoard.getCell(6)).thenReturn("X");
         when(fakeBoard.getBoardState()).thenReturn(new String[] {" ", "X", " ", " ", " ", "X", " ", " ", " "});
@@ -41,8 +40,7 @@ public class WinIfPossibleStrategyTest {
     }
 
     @Test
-    public void testGetNextSquare() {
-        when(fakeBoard.getCell(anyInt())).thenReturn(" ");
+    public void shouldGetNextSquare() {
         when(fakeBoard.getCell(2)).thenReturn("X");
         when(fakeBoard.getCell(5)).thenReturn("X");
         when(fakeBoard.getBoardState()).thenReturn(new String[] {" ", "X", " ", " ", "X", " ", " ", " ", " "});
@@ -52,7 +50,6 @@ public class WinIfPossibleStrategyTest {
 
     @Test
     public void shouldNotMarkBoard() {
-        when(fakeBoard.getCell(anyInt())).thenReturn(" ");
         when(fakeBoard.getCell(2)).thenReturn("X");
         when(fakeBoard.getCell(5)).thenReturn("X");
         when(fakeBoard.getBoardState()).thenReturn(new String[] {" ", "X", " ", " ", "X", " ", " ", " ", " "});

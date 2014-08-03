@@ -14,6 +14,7 @@ public class ComputerPlayerTest {
     private List<Strategy> strategies;
     private Strategy winIfPossibleStrategy;
     private Strategy nextAvailableSquareStrategy;
+    private Strategy blockIfPossibleStrategy;
     private Board board;
 
     @Before
@@ -21,6 +22,8 @@ public class ComputerPlayerTest {
         strategies = new ArrayList<Strategy>();
         winIfPossibleStrategy = mock(WinIfPossibleStrategy.class);
         strategies.add(winIfPossibleStrategy);
+        blockIfPossibleStrategy = mock(BlockIfPossibleStrategy.class);
+        strategies.add(blockIfPossibleStrategy);
         nextAvailableSquareStrategy = mock(NextAvailableSquareStrategy.class);
         when(nextAvailableSquareStrategy.canBeUsed()).thenReturn(true);
         strategies.add(nextAvailableSquareStrategy);
@@ -33,12 +36,24 @@ public class ComputerPlayerTest {
         when(winIfPossibleStrategy.canBeUsed()).thenReturn(true);
         player.takeTurn(board);
         verify(winIfPossibleStrategy).getNextSquare();
+        verify(blockIfPossibleStrategy, never()).getNextSquare();
         verify(nextAvailableSquareStrategy, never()).getNextSquare();
     }
 
     @Test
-    public void shouldTakeTurnBySelectingFirstAvailableCell() {
+    public void shouldOtherwiseBlockIfPossible() {
         when(winIfPossibleStrategy.canBeUsed()).thenReturn(false);
+        when(blockIfPossibleStrategy.canBeUsed()).thenReturn(true);
+        player.takeTurn(board);
+        verify(winIfPossibleStrategy, never()).getNextSquare();
+        verify(blockIfPossibleStrategy).getNextSquare();
+        verify(nextAvailableSquareStrategy, never()).getNextSquare();
+    }
+
+    @Test
+    public void shouldOtherwiseSelectFirstAvailableCell() {
+        when(winIfPossibleStrategy.canBeUsed()).thenReturn(false);
+        when(blockIfPossibleStrategy.canBeUsed()).thenReturn(false);
         player.takeTurn(board);
         verify(winIfPossibleStrategy, never()).getNextSquare();
         verify(nextAvailableSquareStrategy).getNextSquare();
