@@ -27,7 +27,7 @@ public class Game {
 
             currentPlayer = players.get(currentPlayerIndex);
             currentPlayer.takeTurn(board);
-            if (board.hasBeenWonBy(currentPlayer)) {
+            if (board.hasBeenWonBy(currentPlayer.getSymbol())) {
                 message = "Player " + currentPlayer.getNumber() + " Wins!";
             }
 
@@ -39,7 +39,7 @@ public class Game {
 
     private boolean gameEnded() {
         return board.isFull()
-                || board.hasBeenWonBy(players.get(0))
-                || board.hasBeenWonBy(players.get(1));
+                || board.hasBeenWonBy(players.get(0).getSymbol())
+                || board.hasBeenWonBy(players.get(1).getSymbol());
     }
 }

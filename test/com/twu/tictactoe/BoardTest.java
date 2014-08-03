@@ -95,7 +95,7 @@ public class BoardTest {
         });
         Player player = mock(Player.class);
         when(player.getSymbol()).thenReturn("X");
-        assertThat(board.hasBeenWonBy(player), is(true));
+        assertThat(board.hasBeenWonBy("X"), is(true));
 
     }
 
@@ -108,7 +108,7 @@ public class BoardTest {
         });
         Player player = mock(Player.class);
         when(player.getSymbol()).thenReturn("X");
-        assertThat(board.hasBeenWonBy(player), is(true));
+        assertThat(board.hasBeenWonBy("X"), is(true));
     }
 
     @Test
@@ -120,7 +120,7 @@ public class BoardTest {
         });
         Player player = mock(Player.class);
         when(player.getSymbol()).thenReturn("X");
-        assertThat(board.hasBeenWonBy(player), is(true));
+        assertThat(board.hasBeenWonBy("X"), is(true));
     }
 
     @Test
@@ -132,7 +132,7 @@ public class BoardTest {
         });
         Player player = mock(Player.class);
         when(player.getSymbol()).thenReturn("X");
-        assertThat(board.hasBeenWonBy(player), is(false));
+        assertThat(board.hasBeenWonBy("X"), is(false));
     }
 
 }

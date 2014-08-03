@@ -3,37 +3,57 @@ package com.twu.tictactoe;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertThat;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.mockito.Mockito.*;
 
 public class ComputerPlayerTest {
 
     private ComputerPlayer player;
+    private List<Strategy> strategies;
+    private Strategy winIfPossibleStrategy;
+    private Strategy nextAvailableSquareStrategy;
+    private Board board;
 
     @Before
     public void setUp() {
-        player = new ComputerPlayer(1, "X");
+        strategies = new ArrayList<Strategy>();
+        winIfPossibleStrategy = mock(WinIfPossibleStrategy.class);
+        strategies.add(winIfPossibleStrategy);
+        nextAvailableSquareStrategy = mock(NextAvailableSquareStrategy.class);
+        when(nextAvailableSquareStrategy.canBeUsed()).thenReturn(true);
+        strategies.add(nextAvailableSquareStrategy);
+        player = new ComputerPlayer(1, "X", strategies);
+        board = mock(Board.class);
     }
+
+
 
     @Test
     public void shouldTakeEmptySquareIfCanWin() {
-        Board board = new Board(new String[]{
-                " ", " ", " ",
-                "X", " ", "X",
-                " ", " ", " "
-        });
+//        Board board = new Board(new String[]{
+//                " ", " ", " ",
+//                "X", " ", "X",
+//                " ", " ", " "
+//        });
+        when(winIfPossibleStrategy.canBeUsed()).thenReturn(true);
         player.takeTurn(board);
-        assertThat(board.getCell(5), is("X"));
+        verify(winIfPossibleStrategy).getNextSquare();
+        verify(strategies.get(0)).getNextSquare();
+        verify(strategies.get(1), never()).getNextSquare();
     }
 
     @Test
     public void shouldTakeTurnBySelectingFirstAvailableCell() {
-        Board board = new Board(new String[]{
-                " ", " ", " ",
-                "X", " ", " ",
-                " ", " ", " "
-        });
+//        Board board = new Board(new String[]{
+//                " ", " ", " ",
+//                "X", " ", " ",
+//                " ", " ", " "
+//        });
+        when(winIfPossibleStrategy.canBeUsed()).thenReturn(false);
         player.takeTurn(board);
-        assertThat(board.getCell(1), is("X"));
+        verify(winIfPossibleStrategy, never()).getNextSquare();
+        verify(nextAvailableSquareStrategy).getNextSquare();
     }
 }

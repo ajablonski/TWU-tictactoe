@@ -2,12 +2,12 @@ package com.twu.tictactoe;
 
 public class WinIfPossibleStrategy implements Strategy {
 
-    private final Player player;
+    private final String playerSymbol;
     private final Board board;
 
-    public WinIfPossibleStrategy(Board board, Player player) {
+    public WinIfPossibleStrategy(Board board, String playerSymbol) {
         this.board = board;
-        this.player = player;
+        this.playerSymbol = playerSymbol;
     }
 
     @Override
@@ -22,9 +22,9 @@ public class WinIfPossibleStrategy implements Strategy {
         for (int i = 1; i <= 9 && nextSquare == 0; i++) {
             if (board.cellIsEmpty(i)) {
                 Board testBoard = new Board(board.getBoardState());
-                testBoard.mark(i, player.getSymbol());
-                if (testBoard.hasBeenWonBy(player)) {
-                    board.mark(i, player.getSymbol());
+                testBoard.mark(i, playerSymbol);
+                if (testBoard.hasBeenWonBy(playerSymbol)) {
+                    board.mark(i, playerSymbol);
                     nextSquare = i;
                 }
             }

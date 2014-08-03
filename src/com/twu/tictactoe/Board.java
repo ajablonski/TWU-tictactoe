@@ -75,11 +75,10 @@ public class Board {
         return hasWonDownwardDiagonal || hasWonUpwardDiagonal;
     }
 
-    public boolean hasBeenWonBy(Player player) {
-        String symbol = player.getSymbol();
-        boolean hasWon = hasWonDiagonal(symbol);
+    public boolean hasBeenWonBy(String playerSymbol) {
+        boolean hasWon = hasWonDiagonal(playerSymbol);
         for (int i = 0; i < 3 && !hasWon; i++) {
-            hasWon = hasWonRow(i, symbol) || hasWonColumn(i, symbol);
+            hasWon = hasWonRow(i, playerSymbol) || hasWonColumn(i, playerSymbol);
         }
         return hasWon;
     }

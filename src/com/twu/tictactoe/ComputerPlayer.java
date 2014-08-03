@@ -1,18 +1,18 @@
 package com.twu.tictactoe;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ComputerPlayer extends Player {
 
-    public ComputerPlayer(int playerNumber, String symbol) {
+    private final List<Strategy> strategies;
+
+    public ComputerPlayer(int playerNumber, String symbol, List<Strategy> strategies) {
         super(null, null, playerNumber, symbol);
+        this.strategies = strategies;
     }
 
     @Override
     public void takeTurn(Board board) {
-        ArrayList<Strategy> strategies = new ArrayList<Strategy>();
-        strategies.add(new WinIfPossibleStrategy(board, this));
-        strategies.add(new NextAvailableSquareStrategy(board));
         for (Strategy strategy : strategies) {
             if (strategy.canBeUsed()) {
                 board.mark(strategy.getNextSquare(), getSymbol());

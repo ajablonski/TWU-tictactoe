@@ -36,7 +36,7 @@ public class GameTest {
     @Test
     public void shouldPlayUntilBoardIsFull() {
         when(fakeBoard.isFull()).thenReturn(false, false, false, true);
-        when(fakeBoard.hasBeenWonBy(any(Player.class))).thenReturn(false);
+        when(fakeBoard.hasBeenWonBy(anyString())).thenReturn(false);
         testGame.start();
         verify(player1, times(2)).takeTurn(fakeBoard);
         verify(player2, times(1)).takeTurn(fakeBoard);
@@ -45,7 +45,8 @@ public class GameTest {
 
     @Test
     public void shouldStopWhenPlayerHasWon() {
-        when(fakeBoard.hasBeenWonBy(player1)).thenReturn(false, true);
+        when(player1.getSymbol()).thenReturn("X");
+        when(fakeBoard.hasBeenWonBy(player1.getSymbol())).thenReturn(false, true);
         when(player1.getNumber()).thenReturn(1);
         testGame.start();
         verify(player1, times(1)).takeTurn(fakeBoard);
