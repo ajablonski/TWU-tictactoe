@@ -1,4 +1,4 @@
-package com.twu.tictactoe;
+package com.twu.tictactoe.strategies;
 
 public interface Strategy {
     public boolean canBeUsed();

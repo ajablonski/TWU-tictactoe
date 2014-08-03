@@ -1,5 +1,6 @@
-package com.twu.tictactoe;
+package com.twu.tictactoe.strategies;
 
+import com.twu.tictactoe.Board;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,6 @@
-package com.twu.tictactoe;
+package com.twu.tictactoe.strategies;
+
+import com.twu.tictactoe.Board;
 
 public class WinIfPossibleStrategy implements Strategy {
 

@@ -1,5 +1,7 @@
 package com.twu.tictactoe;
 
+import com.twu.tictactoe.strategies.*;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ public class Main {
         ArrayList<Strategy> strategies = new ArrayList<Strategy>();
         strategies.add(new WinIfPossibleStrategy(board, "O"));
         strategies.add(new BlockIfPossibleStrategy(board, "X"));
+        strategies.add(new ForkIfPossibleStrategy(board, "O"));
         strategies.add(new NextAvailableSquareStrategy(board));
         Player player2 = new ComputerPlayer(2, "O", strategies);
 

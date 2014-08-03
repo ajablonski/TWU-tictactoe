@@ -1,5 +1,9 @@
 package com.twu.tictactoe;
 
+import com.twu.tictactoe.strategies.BlockIfPossibleStrategy;
+import com.twu.tictactoe.strategies.NextAvailableSquareStrategy;
+import com.twu.tictactoe.strategies.Strategy;
+import com.twu.tictactoe.strategies.WinIfPossibleStrategy;
 import org.junit.Before;
 import org.junit.Test;
 

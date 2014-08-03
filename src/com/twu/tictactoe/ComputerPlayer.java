@@ -1,5 +1,7 @@
 package com.twu.tictactoe;
 
+import com.twu.tictactoe.strategies.Strategy;
+
 import java.util.List;
 
 public class ComputerPlayer extends Player {

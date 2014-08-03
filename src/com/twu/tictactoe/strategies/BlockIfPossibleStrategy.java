@@ -1,4 +1,6 @@
-package com.twu.tictactoe;
+package com.twu.tictactoe.strategies;
+
+import com.twu.tictactoe.Board;
 
 public class BlockIfPossibleStrategy implements Strategy {
     private Board board;
