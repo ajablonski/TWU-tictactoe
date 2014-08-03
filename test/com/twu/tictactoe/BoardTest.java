@@ -12,18 +12,24 @@ public class BoardTest {
 
     @Before
     public void setUp() throws Exception {
-        board = new Board();
+        board = Board.makeEmpty();
     }
 
     @Test
     public void shouldPrintInitialBoard() {
         assertEquals(board.getBoardString(),
                 "   |   |   \n" +
-                        "-----------\n" +
-                        "   |   |   \n" +
-                        "-----------\n" +
-                        "   |   |   \n"
+                "-----------\n" +
+                "   |   |   \n" +
+                "-----------\n" +
+                "   |   |   \n"
         );
+    }
+
+    @Test
+    public void shouldCreateEmptyBoard() {
+        Board emptyBoard = Board.makeEmpty();
+        assertThat(emptyBoard.getBoardState(), is(new String[] {" ", " ", " ", " ", " ", " ", " ", " ", " "}));
     }
 
     @Test

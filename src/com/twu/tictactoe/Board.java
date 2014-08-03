@@ -7,10 +7,6 @@ public class Board {
         this.state = state.clone();
     }
 
-    public Board() {
-        this.state = new String[] {" ", " ", " ", " ", " ", " ", " ", " ", " "};
-    }
-
     public String getBoardString() {
         return getRowString(0) + "-----------\n" + getRowString(1) + "-----------\n" + getRowString(2);
     }
@@ -81,5 +77,9 @@ public class Board {
             hasWon = hasWonRow(i, playerSymbol) || hasWonColumn(i, playerSymbol);
         }
         return hasWon;
+    }
+
+    public static Board makeEmpty() {
+        return new Board(new String[] {" ", " ", " ", " ", " ", " ", " ", " ", " "});
     }
 }
